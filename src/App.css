@@ -1,11 +1,5 @@
-.card {
-  border: 1px black solid;
-  text-align: center;
-  margin: 10px;
-}
-
 .cardWrap {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
