@@ -6,9 +6,9 @@ const Card = ({ cards }) => (
         {cards.map((item) => (
             <div className='card' key={item.id}>
               <img src={item.image_preview_url} alt="legendImage" width="100%" />
-              {item.traits.map((trait) => {
+              {item.traits.map((trait, id) => {
                 if (trait.trait_type === "Legend")
-                  return <p key={trait.value}>{trait.value}</p>;
+                  return <p key={id}>{trait.value}</p>;
                 return null;
               })}
             </div>)
