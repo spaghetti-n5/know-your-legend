@@ -7,29 +7,33 @@ import Card from './components/Card';
 
 function App() {
   const [cards, setCards] = useState(content);
+  const [resetFilter, setResetFilter] = useState(false);
 
   const handleChangeName = (val) => {
-    var filteredDataName = content.filter(function(item) {
+    setResetFilter(false);
+    const filteredDataName = content.filter(function(item) {
       return item.name === val;
     });
     setCards(filteredDataName);
   };
 
   const handleChangeTrait = (val) => {
+    setResetFilter(false);
     const filteredDataTrait = cards.filter(x => x.traits.some(y => y.value === val));
     setCards(filteredDataTrait);
   };
 
   const showAllHandler = () => {
     setCards(content);
-  }
+    setResetFilter(true);
+  };
 
   return (
     <div className='layout'>
       <div className='header'>
         <button className='button' onClick={showAllHandler}>Show all</button>
-        <FilterMenuNames content={cards} changeOption={handleChangeName} />
-        <FilterMenuTraits content={cards} changeOption={handleChangeTrait} />
+        <FilterMenuNames content={cards} changeOption={handleChangeName} resetFilter={resetFilter} />
+        <FilterMenuTraits content={cards} changeOption={handleChangeTrait} resetFilter={resetFilter} />
       </div>
       <div className='cardWrap'>
         <Card cards={cards} />  

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './FilterMenu.css';
 
-const FilterMenuNames = ({ content, changeOption }) => {
+const FilterMenuNames = ({ content, changeOption, resetFilter }) => {
     const [cardSelected, selectCard] = useState("");
 
     const handleChange = (e) => {
@@ -12,7 +12,7 @@ const FilterMenuNames = ({ content, changeOption }) => {
 
     return (
         <>
-            <select className='filterMenu' id="name" value={cardSelected} onChange={handleChange}>
+            <select className='filterMenu' id="name" value={resetFilter ? "" : cardSelected} onChange={handleChange}>
             <option value="" disabled selected hidden>Select a Legend</option>
                 {content.map((item) => (
                     <option key={item.id} value={item.name}>

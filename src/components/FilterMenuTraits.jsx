@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const FilterMenuTraits = ({ content, changeOption }) => {
+const FilterMenuTraits = ({ content, changeOption, resetFilter }) => {
     const [cardSelected, selectCard] = useState("");
 
     const handleChange = (e) => {
@@ -11,7 +11,7 @@ const FilterMenuTraits = ({ content, changeOption }) => {
 
     return (
         <>
-            <select className='filterMenu' id="traits" value={cardSelected} onChange={handleChange}>
+            <select className='filterMenu' id="traits" value={resetFilter ? "" : cardSelected} onChange={handleChange}>
             <option value="" disabled selected hidden>Select a Trait</option>
                 {content.map((item) => (
                     item.traits.map((trait) => (

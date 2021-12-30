@@ -8,7 +8,7 @@ const Card = ({ cards }) => (
               <img src={item.image_preview_url} alt="legendImage" width="100%" />
               {item.traits.map((trait) => {
                 if (trait.trait_type === "Legend")
-                  return <p key={trait.value}>{item.token_id} - {trait.value}</p>;
+                  return <p key={trait.value}>{trait.value}</p>;
                 return null;
               })}
             </div>)
