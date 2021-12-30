@@ -9,18 +9,15 @@ function App() {
   const [cards, setCards] = useState(content);
 
   const handleChangeName = (val) => {
-    var filteredData = content.filter(function(item) {
+    var filteredDataName = content.filter(function(item) {
       return item.name === val;
     });
-    setCards(filteredData);
+    setCards(filteredDataName);
   };
 
   const handleChangeTrait = (val) => {
-    const res = cards.filter(x =>
-                x.traits.some(y =>
-                    y.value === val)
-                )
-    setCards(res);
+    const filteredDataTrait = cards.filter(x => x.traits.some(y => y.value === val));
+    setCards(filteredDataTrait);
   };
 
   return (

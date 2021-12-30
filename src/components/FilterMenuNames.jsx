@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 const FilterMenuNames = ({ content, changeOption }) => {
     const [cardSelected, selectCard] = useState("");
@@ -10,20 +10,17 @@ const FilterMenuNames = ({ content, changeOption }) => {
     };
 
     return (
-
         <>
             <select id="name" value={cardSelected} onChange={handleChange}>
             <option value="disabled"> -- pick a Legend -- </option>
-                {
-                  content.map((item) => (
-                    <option key={item.id} value={item.name}
-                    >
-                      {
-                        item.traits.map(a => { 
-                          if (a['trait_type'] === "Legend")
+                {content.map((item) => (
+                    <option key={item.id} value={item.name}>
+                      {item.traits.map((a) => { 
+                        if (a['trait_type'] === "Legend") {
                             return a['value']
                         }
-                    )}
+                        return null;
+                      })}
                     </option>
                 ))}
             </select>
