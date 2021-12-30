@@ -11,9 +11,7 @@ function App() {
 
   const handleChangeName = (val) => {
     setResetFilter(false);
-    const filteredDataName = content.filter(function(item) {
-      return item.name === val;
-    });
+    const filteredDataName = cards.filter(x => x.traits.some(y => y.value === val));
     setCards(filteredDataName);
   };
 
