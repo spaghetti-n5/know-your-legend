@@ -15,7 +15,7 @@
 
 .button {
     cursor: pointer;
-    padding: 0 20px;
+    padding: 4px 20px;
     background: transparent;
     border: 1px solid #757575;
     border-radius: 15px;
@@ -25,3 +25,12 @@
 .button:hover {
     background-color: #ccc9c9;
 }
+
+@media only screen and (max-width: 768px) {
+    .layout {
+        margin: 10px;
+    }
+    .cardWrap {
+        justify-content: center;
+    }
+  }

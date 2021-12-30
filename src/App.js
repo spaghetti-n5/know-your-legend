@@ -28,8 +28,8 @@ function App() {
     <div className='layout'>
       <div className='header'>
         <button className='button' onClick={showAllHandler}>Show all</button>
-        <FilterMenuNames content={content} changeOption={handleChangeName}/>
-        <FilterMenuTraits content={content} changeOption={handleChangeTrait}/>
+        <FilterMenuNames content={cards} changeOption={handleChangeName} />
+        <FilterMenuTraits content={cards} changeOption={handleChangeTrait} />
       </div>
       <div className='cardWrap'>
         <Card cards={cards} />  
