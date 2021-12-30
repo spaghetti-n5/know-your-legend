@@ -21,9 +21,11 @@ function App() {
   };
 
   return (
-    <div>
-      <FilterMenuNames content={content} changeOption={handleChangeName}/>
-      <FilterMenuTraits content={content} changeOption={handleChangeTrait}/>
+    <div className='layout'>
+      <div className='filterMenus'>
+        <FilterMenuNames content={content} changeOption={handleChangeName}/>
+        <FilterMenuTraits content={content} changeOption={handleChangeTrait}/>
+      </div>
       <div className='cardWrap'>
         <Card cards={cards} />  
       </div>

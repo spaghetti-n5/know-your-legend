@@ -1,5 +1,14 @@
+.layout {
+    margin: 20px;
+}
+
 .cardWrap {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: left;
+}
+
+.filterMenus {
+    display: flex;
+    padding-bottom: 20px;
 }
