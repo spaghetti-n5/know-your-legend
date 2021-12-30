@@ -8,18 +8,25 @@ import Card from './components/Card';
 function App() {
   const [cards, setCards] = useState(content);
 
-  const handleChange = (val) => {
-    setCards(val);
+  const handleChangeName = (val) => {
     var filteredData = content.filter(function(item) {
       return item.name === val;
     });
     setCards(filteredData);
   };
 
+  const handleChangeTrait = (val) => {
+    const res = cards.filter(x =>
+                x.traits.some(y =>
+                    y.value === val)
+                )
+    setCards(res);
+  };
+
   return (
     <div>
-      <FilterMenuNames content={content} changeOption={handleChange}/>
-      <FilterMenuTraits content={content} changeOption={handleChange}/>
+      <FilterMenuNames content={content} changeOption={handleChangeName}/>
+      <FilterMenuTraits content={content} changeOption={handleChangeTrait}/>
       <div className='cardWrap'>
         <Card cards={cards} />  
       </div>
