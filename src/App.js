@@ -20,9 +20,14 @@ function App() {
     setCards(filteredDataTrait);
   };
 
+  const showAllHandler = () => {
+    setCards(content);
+  }
+
   return (
     <div className='layout'>
-      <div className='filterMenus'>
+      <div className='header'>
+        <button className='button' onClick={showAllHandler}>Show all</button>
         <FilterMenuNames content={content} changeOption={handleChangeName}/>
         <FilterMenuTraits content={content} changeOption={handleChangeTrait}/>
       </div>
