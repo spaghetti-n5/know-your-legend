@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import './App.css';
 import content from './content/content.json';
-import FilterMenu from './components/FilterMenu';
+import FilterMenuNames from './components/FilterMenuNames';
+import FilterMenuTraits from './components/FilterMenuTraits';
 import Card from './components/Card';
 
 function App() {
@@ -17,7 +18,8 @@ function App() {
 
   return (
     <div>
-      <FilterMenu content={content} changeOption={handleChange} />
+      <FilterMenuNames content={content} changeOption={handleChange}/>
+      <FilterMenuTraits content={content} changeOption={handleChange}/>
       <div className='cardWrap'>
         <Card cards={cards} />  
       </div>
