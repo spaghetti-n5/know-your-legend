@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import content from './content/content.json';
 import FilterMenuNames from './components/FilterMenuNames';
