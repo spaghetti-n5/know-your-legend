@@ -12,6 +12,7 @@ const FilterMenuTraits = ({ content, changeOption }) => {
     return (
         <>
             <select id="traits" value={cardSelected} onChange={handleChange}>
+            <option value="disabled"> -- pick a Trait -- </option>
                 {
                   content.map((item) => (
                     item.traits.map((trait) => (

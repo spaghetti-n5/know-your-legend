@@ -13,6 +13,7 @@ const FilterMenuNames = ({ content, changeOption }) => {
 
         <>
             <select id="name" value={cardSelected} onChange={handleChange}>
+            <option value="disabled"> -- pick a Legend -- </option>
                 {
                   content.map((item) => (
                     <option key={item.id} value={item.name}
