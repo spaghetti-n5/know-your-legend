@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/know-your-legend/static/css/main.b190ff85.css",
+    "main.js": "/know-your-legend/static/js/main.c8265452.js",
+    "static/js/787.d0b62108.chunk.js": "/know-your-legend/static/js/787.d0b62108.chunk.js",
+    "index.html": "/know-your-legend/index.html",
+    "main.b190ff85.css.map": "/know-your-legend/static/css/main.b190ff85.css.map",
+    "main.c8265452.js.map": "/know-your-legend/static/js/main.c8265452.js.map",
+    "787.d0b62108.chunk.js.map": "/know-your-legend/static/js/787.d0b62108.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b190ff85.css",
+    "static/js/main.c8265452.js"
+  ]
+}
