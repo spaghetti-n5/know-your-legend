@@ -25,11 +25,11 @@ const FilterSubMenuGeneric = ({ content, changeOption, currentName, resetFilter,
   
       const valuesFlat = values.flat()
       const uniqueValues = [...new Set(valuesFlat)]
-      console.log("values", uniqueValues)
       return uniqueValues;
     };
 
     const uniqueValues = getCardsUniqueValues()
+    console.log("resetFilterStatus of", traitName, resetFilter)
     return (
         <>
             <select className='filterMenu' id={traitName} value={resetFilter ? "" : cardSelected} onChange={handleChange}>
