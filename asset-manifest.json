@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/know-your-legend/static/css/main.4b900467.css",
-    "main.js": "/know-your-legend/static/js/main.5fb8d5c7.js",
+    "main.css": "/know-your-legend/static/css/main.6b642b4c.css",
+    "main.js": "/know-your-legend/static/js/main.6732535c.js",
     "static/js/787.d0b62108.chunk.js": "/know-your-legend/static/js/787.d0b62108.chunk.js",
     "index.html": "/know-your-legend/index.html",
     "static/media/arrow.svg": "/know-your-legend/static/media/arrow.a79e40151cc51fac878a.svg",
-    "main.4b900467.css.map": "/know-your-legend/static/css/main.4b900467.css.map",
-    "main.5fb8d5c7.js.map": "/know-your-legend/static/js/main.5fb8d5c7.js.map",
+    "main.6b642b4c.css.map": "/know-your-legend/static/css/main.6b642b4c.css.map",
+    "main.6732535c.js.map": "/know-your-legend/static/js/main.6732535c.js.map",
     "787.d0b62108.chunk.js.map": "/know-your-legend/static/js/787.d0b62108.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4b900467.css",
-    "static/js/main.5fb8d5c7.js"
+    "static/css/main.6b642b4c.css",
+    "static/js/main.6732535c.js"
   ]
 }
