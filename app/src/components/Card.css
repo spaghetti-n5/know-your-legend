@@ -1,16 +1,24 @@
 .card {
-    border: 1px #757575 solid;
+    border: 1px #A4C3B2 solid;
     text-align: center;
     margin: 0 5px 10px;
     width: 20%;
+    padding: 20px 10px;
+    box-sizing: border-box;
   }
 
   .cardTitle {
-    padding: 10px 0;
+    padding-top: 20px;
+    font-size: 14px;
   }
 
   @media only screen and (max-width: 768px) {
     .card {
       width: 45%;
+      padding: 10px 5px;
+    }
+    .cardTitle {
+      padding-top: 10px;
+      font-size: 12px;
     }
   }

@@ -106,6 +106,11 @@ function App() {
         pageSize={PageSize}
         onPageChange={page => setCurrentPage(page)}
       />
+      <div className='footer'>
+        <p>
+          If you enjoy this site, consider donating to 0x8B5f432940055A63761919B173BAe66f918789B0
+        </p>
+      </div>
     </>
   );
 }

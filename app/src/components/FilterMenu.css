@@ -11,6 +11,7 @@
     outline: none;
     cursor: pointer;
     color: #34463E;
+    font-size: 14px;
 }
 
 .filterMenuOptions {
@@ -21,5 +22,6 @@
     .filterMenu {
         margin: 0 5px;
         width: 45%;
+        font-size: 12px;
     }
   }
