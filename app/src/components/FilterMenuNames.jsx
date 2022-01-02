@@ -27,7 +27,7 @@ const FilterMenuNames = ({ content, changeOption, resetFilter }) => {
     return (
         <>
             <select className='filterMenu' id="name" value={resetFilter ? "" : cardSelected} onChange={handleChange}>
-            <option value="" disabled hidden>Select a Legend</option>
+            <option className='filterMenuOptions' value="" disabled hidden>Select a Legend</option>
             { legendNames.map((legend => ( <option key={legend} value={legend}>{legend}</option>))) }
             </select>
         </>

@@ -7,22 +7,19 @@ import Card from './components/Card';
 import Pagination from './components/Pagination';
 
 const PageSize = 30;
-const traits = [ "Accessories",
-"Background",
-"Clothes",
-"Club",
-"Ear",
-"Fourth Club",
-"Hair",
-"Legend",
-"Second Club",
-"Special Club Item",
-"Special Edition",
-"Special Legend Item",
-"Special Vibes",
-"Tattoos",
-"Third Club",
-"Vibes"]
+const traits = [ 
+  "Accessories",
+  "Background",
+  "Clothes",
+  "Club",
+  "Hair",
+  "Special Club Item",
+  "Special Edition",
+  "Special Legend Item",
+  "Special Vibes",
+  "Tattoos",
+  "Vibes",
+];
 
 function App() {
   const [cards, setCards] = useState(content);
@@ -59,31 +56,39 @@ function App() {
   };
 
   return (
-    <div className='layout'>
+    <>
       <div className='header'>
-        <button className='button' onClick={showAllHandler}>Show all</button>
-        <FilterMenuNames content={content} changeOption={handleChangeName} resetFilter={resetFilter} />
-        {traits.map((trait) => (
-          <FilterSubMenuGeneric
-            content={content}
-            changeOption={handleChangeTrait}
-            currentName={currentName}
-            resetFilter={resetFilter}
-            traitName={trait}
-          />
-        ))}
+        <h1>Know your Legend</h1>
+        <p className='headerSubtitle'>A site for House of Legends collectors</p>
+      </div>
+      <div className='filterBlock'>
+        <div className='nameFilter'>
+          <button className='button' onClick={showAllHandler}>Show all</button>
+          <FilterMenuNames content={content} changeOption={handleChangeName} resetFilter={resetFilter} />
+        </div>
+        <div className='traitsFilters'>
+          {traits.map((trait) => (
+            <FilterSubMenuGeneric
+              content={content}
+              changeOption={handleChangeTrait}
+              currentName={currentName}
+              resetFilter={resetFilter}
+              traitName={trait}
+            />
+          ))}
+        </div>
       </div>
       <div className='cardWrap'>
         <Card cards={currentTableData} />  
       </div>
       <Pagination
-        className="pagination-bar"
+        className='pagination-bar'
         currentPage={currentPage}
         totalCount={cards.length}
         pageSize={PageSize}
         onPageChange={page => setCurrentPage(page)}
       />
-    </div>
+    </>
   );
 }
 

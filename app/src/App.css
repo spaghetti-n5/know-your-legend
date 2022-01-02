@@ -1,36 +1,70 @@
-.layout {
-    margin: 20px;
+.header {
+    padding: 20px;
+    background: #CCE3DE;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid #34463E;
+}
+
+.headerSubtitle {
+    font-size: 16px;
+    font-weight: normal;
+    font-style: italic;
+    padding-top: 10px;
 }
 
 .cardWrap {
     display: flex;
     flex-wrap: wrap;
-    justify-content: left;
+    justify-content: center;
+    margin-top: 40px;
 }
 
-.header {
+.filterBlock {
+    padding: 20px 10px;
+    background: #EAF4F4;
+}
+
+.nameFilter {
     display: flex;
-    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.traitsFilters {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .button {
     cursor: pointer;
     padding: 4px 20px;
-    background: transparent;
-    border: 1px solid #757575;
-    border-radius: 15px;
+    background-color: #CCE3DE;
     margin-right: 20px;
+    color: #34463E;
+    border: none;
 }
 
 .button:hover {
-    background-color: #ccc9c9;
+    border-radius: 15px;
 }
 
 @media only screen and (max-width: 768px) {
-    .layout {
-        margin: 10px;
+    .header {
+        padding: 20px;
+        font-size: 16px;
     }
+
+    .headerSubtitle {
+        font-size: 14px;
+        padding-top: 8px;
+    }
+
     .cardWrap {
         justify-content: center;
+        margin-top: 20px;
+    }
+
+    .filterBlock {
+        padding: 15px 5px;
     }
   }

@@ -1,13 +1,16 @@
 .card {
     border: 1px #757575 solid;
     text-align: center;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    width: 200px;
+    margin: 0 5px 10px;
+    width: 20%;
+  }
+
+  .cardTitle {
+    padding: 10px 0;
   }
 
   @media only screen and (max-width: 768px) {
     .card {
-      width: 150px;
+      width: 45%;
     }
   }

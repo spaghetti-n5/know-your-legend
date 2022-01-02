@@ -11,3 +11,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+ul {
+  padding-inline-start: 0;
+}
+
+h1, p {
+  margin: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  body, button, select {
+    font-size: 11px;
+  }
+}
