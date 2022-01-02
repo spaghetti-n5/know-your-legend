@@ -24,16 +24,17 @@ const FilterSubMenuGeneric = ({ content, changeOption, currentName, resetFilter,
       }
   
       const valuesFlat = values.flat()
-      const uniqueValues = [...new Set(valuesFlat)]
+      // flat array, and remove null elements using filter
+      const uniqueValues = [...new Set(valuesFlat.filter(n => n))]
+      uniqueValues.sort()
       return uniqueValues;
     };
 
     const uniqueValues = getCardsUniqueValues()
-    console.log("resetFilterStatus of", traitName, resetFilter)
     return (
         <>
             <select className='filterMenu' id={traitName} value={resetFilter ? "" : cardSelected} onChange={handleChange}>
-            <option value="" disabled hidden>Select a {traitName}</option>
+            <option value="" disabled>{traitName}</option>
             { uniqueValues.map((legend => ( <option key={legend} value={legend}>{legend}</option>))) }
             </select>
         </>

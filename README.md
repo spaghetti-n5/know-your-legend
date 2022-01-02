@@ -7,7 +7,7 @@ This project is a ReactJS application, deployed in Github Pages. It has been tes
 ### Running locally
 1. Change directory: `cd app`
 2. Install dependencies: `yarn`
-3. Start the local development server: `yarn`
+3. Start the local development server: `yarn start`
 
 ## Donate
 If you find this project useful, consider donating to 0x8B5f432940055A63761919B173BAe66f918789B0.
