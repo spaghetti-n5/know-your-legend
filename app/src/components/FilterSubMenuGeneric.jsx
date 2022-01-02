@@ -26,6 +26,7 @@ const FilterSubMenuGeneric = ({ content, changeOption, currentName, resetFilter,
       const valuesFlat = values.flat()
       // flat array, and remove null elements using filter
       const uniqueValues = [...new Set(valuesFlat.filter(n => n))]
+      uniqueValues.sort()
       return uniqueValues;
     };
 

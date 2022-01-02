@@ -8,9 +8,9 @@ import Pagination from './components/Pagination';
 
 const PageSize = 30;
 const traits = [ 
-  "Accessories",
   "Background",
   "Clothes",
+  "Accessories",
   "Club",
   "Hair",
   "Special Club Item",
@@ -26,6 +26,7 @@ function App() {
   const [resetFilter, setResetFilter] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [currentName, setCurrentName] = useState("");
+  const [currentTraitFilter, setCurrentTraitFilter] = useState("");
   
   const firstPageIndex = (currentPage - 1) * PageSize;
   const lastPageIndex = firstPageIndex + PageSize;
@@ -38,6 +39,18 @@ function App() {
     setCurrentName(val);
   };
 
+  // Finds and returns an object containing a keyToFind === valToFind
+  const findNestedObj = (entireObj, keyToFind, valToFind) => {
+    let foundObj;
+    JSON.stringify(entireObj, (_, nestedValue) => {
+      if (nestedValue && nestedValue[keyToFind] === valToFind) {
+        foundObj = nestedValue;
+      }
+      return nestedValue;
+    });
+    return foundObj;
+  };
+
   const handleChangeTrait = (val) => {
     setResetFilter(false);
     let filteredDataName = [];
@@ -46,8 +59,13 @@ function App() {
     } else {
       filteredDataName = content;
     }
+    // Useful for resetting the filter. Ideally we don't perform this search
+    // because we can probably get this valu from filterID
+    const traitType = findNestedObj(filteredDataName, "value", val)['trait_type'];
+    setCurrentTraitFilter(traitType);
+
     const filteredTraits = filteredDataName.filter(x => x.traits.some(y => y.value === val));
-    setCards(filteredTraits);  
+    setCards(filteredTraits);
   };
 
   const showAllHandler = () => {
@@ -72,7 +90,7 @@ function App() {
               content={content}
               changeOption={handleChangeTrait}
               currentName={currentName}
-              resetFilter={resetFilter}
+              resetFilter={currentTraitFilter === trait ? false : true}
               traitName={trait}
             />
           ))}
