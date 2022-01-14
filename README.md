@@ -1,5 +1,5 @@
 # Know Your Legends
-Know Your Legends is a fans site for [House of Legends]() cards. It allows users to better understand the different Traits and Rarity of the Legends. It improves Opensea's esperience for browsing the collection.
+Know Your Legends is a fans site for [House of Legends](https://www.houseoflegends.art/) cards. It allows users to better understand the different Traits and Rarity of the Legends. It improves Opensea's esperience for browsing the collection.
 
 ## Contribute
 This project is a ReactJS application, deployed in Github Pages. It has been tested with ReactJS 17.
