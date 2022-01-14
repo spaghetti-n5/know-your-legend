@@ -85,8 +85,9 @@ function App() {
           <FilterMenuNames content={content} changeOption={handleChangeName} resetFilter={resetFilter} />
         </div>
         <div className='traitsFilters'>
-          {traits.map((trait) => (
+          {traits.map((trait, i) => (
             <FilterSubMenuGeneric
+              key={i}
               content={content}
               changeOption={handleChangeTrait}
               currentName={currentName}
